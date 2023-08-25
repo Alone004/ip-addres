@@ -1,0 +1,17 @@
+https://www.free-css.com/assets/files/free-css-templates/preview/page288/meetup/
+
+
+
+text-transform-barcha matnlarni katta yoki kichik etib beradi.
+ 
+text-decoration-liboy joydan chiziqcha chiqarish yoki yoqatish mumkin
+
+letter-spacing-harflarni orasidan masofa tashab beradi
+
+text-uppercase -matnlarni kattalashtrb beradi
+
+sup-harflarni tepadan qo'yib beruvchi 
+sub - harflarni pastdan qo'yib beradi
+
+box-shadow:;
+

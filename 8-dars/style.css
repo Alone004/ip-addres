@@ -1,0 +1,503 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --bg-color: #016cc7;
+    --text-color: #404142;
+    --nav--text: white;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: .8px;
+    color: var(--text-color);
+    font-weight: 400;
+    margin: 20px 0px 10px;
+}
+
+.container__large {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Main style start */
+.flex {
+    display: flex;
+}
+
+/* Main Style End  */
+
+/* Navigation Start Style  */
+.nav {
+    background-color: var(--bg-color);
+}
+
+.nav-list {
+    list-style: none;
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50);
+}
+
+.nav-item {
+    position: relative;
+    margin: 10px;
+}
+
+.dot {
+    display: block;
+    position:absolute;
+    right: 0;
+    height: 10px;
+    width: 10px;
+    background-color: red;
+    top: 50%;
+    transform:translateY(-50%) ;
+    border-radius: 50px;
+    cursor:pointer;
+}
+.nav-item a {
+    padding: 5px;
+    position: relative;
+    color: var(--nav--text);
+    text-decoration: none;
+    font-style: 12px;
+    border-radius: 4px;
+    background-color:#dd5138;
+    opacity: 0;
+    transition: all .3s;
+    margin-right: 10px;
+
+}
+.nav-item a.home{
+    right:-25px;
+}
+.nav-item .dot:hover ~ a{
+    opacity: 1;
+}
+.nav-item a:hover{
+    opacity: 1;
+    color: white;
+}
+/* Navigation End Style */
+
+/* Meetup  style start */
+.meetup {
+    background-color: var(--bg-color);
+    min-height: 400px;
+    padding: 80px;
+
+}
+
+.meetup .left {
+    width: 55%;
+}
+
+.left-img {
+    width: 180px;
+    height: 70px;
+}
+
+.meetup :is(h2, h3, h4) {
+    color: white;
+    font-weight: 100;
+}
+
+.meetup h2 {
+    margin-top: 36px;
+    font-size: 36px;
+
+}
+
+
+.meetup h4 {
+    opacity: .6;
+    font-size: 18px;
+    margin: 36px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 40px;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: .8;
+    margin-top: 48;
+}
+
+.btn-red {
+    background-color: #dd5138;
+}
+
+.meetup .right img {
+    width: 500px;
+    height: 450px;
+}
+
+/* Meetup End style */
+/* Event Style Start */
+.event {
+    padding: 30px 0;
+}
+
+.event-card {
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+    width: 33.3%;
+}
+
+.event-card i {
+    color: var(--bg-color);
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 80px;
+
+}
+
+.event-card i.fa-ticket {
+    transform: rotate(90deg);
+}
+
+.event-card :is(h3, p) {
+    color: var(--text-color);
+    letter-spacing: .8px;
+    font-weight: 200;
+}
+
+.meetup h3 {
+    font-size: 24px;
+    margin: 20px 0px 10px;
+}
+
+.event-card p {
+    font-size: 16px;
+    margin: 10px;
+}
+
+/* Event Stytle End */
+/* Speakers Style Start */
+.speakers {
+    padding: 30px 0;
+}
+
+.speakers__container {
+    flex-wrap: wrap;
+}
+
+.speaker__card {
+    border: 3px solid #f6f6f6;
+    width: calc(31% - 40px);
+    padding: 20px;
+    margin: 30px 20px 0px 0px;
+    text-align: center;
+}
+
+.speaker__card:hover {
+    box-shadow: 3px 3px 10px #ccc;
+}
+
+.speaker__card img {
+    max-width: 40%;
+    border: 4px solid #efefef;
+    border-radius: 50%;
+}
+
+.speaker__card h2 {
+    font-size: 24px;
+    font-weight: 200;
+    margin: 20px 0px 10px;
+    color: var(--text-color);
+    letter-spacing: .8px;
+}
+
+.speaker__card p {
+    letter-spacing: .8px;
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+.speaker__card .socials {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.speaker__card .socials a {
+    padding: 10px 15px;
+}
+
+.speaker__card .socials a i {
+    font-size: 18px;
+}
+
+.speaker__card .socials .fa-facebook {
+    color: #3b5998;
+}
+
+.speaker__card .socials .fa-twitter {
+    color: #4099ff;
+}
+
+.speaker__card .socials .fa-linkedin-in {
+    color: var(--bg-color);
+}
+
+/* Speakers Style End */
+
+/* Buy Stylen Tickets Start */
+.buy-tickets {
+    background-color: #fcd93b;
+    padding: 30px 0;
+}
+
+
+
+.ticket__card {
+    width: 50%;
+    text-align: center;
+    color: var(--text-color);
+    letter-spacing: .8px;
+}
+
+.ticket__card .ticket__title {
+    font-size: 24px;
+    font-weight: 200;
+    margin: 20px 0px 10px;
+}
+
+.ticket__card .ticket__price {
+    font-size: 64px;
+    color: #dd5138;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+
+.ticket__card a {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #dd5138;
+    color: white;
+    text-decoration: no ne;
+    letter-spacing: .8px;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.ticket__link:hover {
+    color: #333;
+}
+
+/* Buy Stylen Tickets  End*/
+
+/* Event Schedule Style Start */
+
+.tab-content>.active{
+    display: flex !important;
+    flex-wrap: wrap;
+}
+.event__schedule {
+    padding: 30px 0;
+}
+
+.schedule__top {
+    border-bottom: 1px solid #ddd;
+    display: flex;
+}
+
+.btn-schedule {
+    border: 1px solid transparent;
+    padding: 10px 15px;
+    border-radius: 4px 4px 0px 0px;
+    background-color: #fff;
+    border-bottom-color: transparent;
+    color: #337ab7;
+    letter-spacing: .8px;
+    display: inline-block;
+}
+
+.btn-schedule.active {
+    border-color: #ddd;
+    border-bottom-color: transparent;
+    color: #555;
+    margin-bottom: -1px;
+}
+
+.btn-schedule:hover {
+    background-color: #eee;
+    border-color: #eee #eee #ddd;
+}
+
+.schedule__container {
+    flex-wrap: wrap;
+}
+
+.schedule__card {
+    margin-top: 40px;
+    width: calc(50% - 30px);
+    padding: 0 15px;
+}
+
+.speaker__img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+.card__right h3 {
+    font-weight: 600;
+    font-size: 18px;
+    border-bottom: 2px solid #efefef;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+    color: var(--text-color);
+}
+
+.card__right h4 {
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.card__right p {
+    color: var(--text-color);
+    font-size: 16px;
+    letter-spacing: .8px;
+    margin-bottom: 10px;
+}
+
+
+/* Event Schedule Style End */
+/* Cntact Style Start */
+.contact {
+    background-color: #3a3a3a;
+    padding: 16px;
+}
+
+.left__contact {
+    width: 50%;
+}
+
+.left__contact h3,.right__contact h3 {
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-weight: 200;
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__item {
+    width: 100%;
+    display: flex;
+}
+
+.form__item label {
+    font-size: 16px;
+    color: white;
+    font-weight: 700;
+    width: 150px;
+}
+
+.form__item :is(input, textarea) {
+    padding: 10px 10px;
+    border: 3px solid transparent;
+    width: calc(100% - 160px);
+    margin: 10px 10px;
+    outline: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form__item :is(input, textarea):focus {
+    border-color: #66afe9;
+    -webkit-box-shadow: inset 0 1px rgb(0 0 0/ 8%), 0 0 8px rgb(102 175 233 / 60%);
+    box-shadow: inset 0 1px rgb(0 0 0/ 8%), 0 0 8px rgb(102 175 233 / 60%);
+}
+
+.contact__form button{
+align-self: flex-end;
+background-color: #fcd93b;
+color: #2a2a2a;
+opacity: 0.8;
+padding: 6px 12px;
+border: 1px solid transparent;
+border-radius: 4px;
+font-size: 14px;
+cursor: pointer;    
+}
+.contact__form button:hover{
+    opacity: 1;
+}
+
+.right__contact {
+    width: 50%;
+}
+.feeds{
+    width: 70%;
+    margin: 0 auto;
+}
+.feed{
+    margin: 10px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid white;
+}
+.feed p {
+    color: white;
+    letter-spacing: 0.8px;
+    text-align: center;
+}
+.feed p a{
+    text-decoration: none;
+    color: #337ab7;
+}
+
+/* Cntact Style End */
+/* Footer Start */
+.footer{
+    background-color:#2a2a2a;
+    padding: 40px;
+    color: white;
+
+}
+.footer__between{
+    justify-content: space-between;
+}
+.footer__title p{
+    letter-spacing: 0.8px;
+}
+.footer__title p a{
+    text-decoration: none;
+    color: #337ab7;
+}
+.footer__title p a:hover{
+    color: #23527c;
+}
+.footer__nav a{
+    color: #fcd93b;
+    padding-right: 20px;
+    text-decoration: none;
+    font-size: 12px;
+}
+.footer__nav a:hover{
+    color: #dd5138;
+}
+/* Footer End */
